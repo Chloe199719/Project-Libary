@@ -5,8 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <table>
+      <tr>
+        <th>Book Title</th>
+        <th>Author</th>
+        <th>Number of Pages</th>
+        <th>Reading Status</th>
+      </tr>
+    </table>
+    <form>
+      <input type="text" id="title" name="title" required />
+      <input type="text" id="author" name="author" required />
+      <input type="number" id="pages" name="pages" required />
+      <label for="read1">read</label>
+      <input type="radio" name="read" id="read1" value="Read" required />
+      <label for="read2">Not Read Yet</label>
+      <input
+        type="radio"
+        name="read"
+        id="read2"
+        value="Not read Yet"
+        required
+      />
+      <button type="submit" id="submit">Send</button>
+    </form>
     <script src="script.js"></script>
   </body>
 </html>
