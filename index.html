@@ -8,30 +8,51 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <table>
-      <tr>
-        <th>Book Title</th>
-        <th>Author</th>
-        <th>Number of Pages</th>
-        <th>Reading Status</th>
-      </tr>
-    </table>
+    <header>
+      <h1>The Library</h1>
+    </header>
+    <main>
+      <table>
+        <tr>
+          <th>Book Title</th>
+          <th>Author</th>
+          <th>Number of Pages</th>
+          <th>Reading Status</th>
+          <th>Actions</th>
+        </tr>
+      </table>
+      <div class="break"></div>
+      <button id="addBook">Add More books</button>
+    </main>
     <form>
-      <input type="text" id="title" name="title" required />
-      <input type="text" id="author" name="author" required />
-      <input type="number" id="pages" name="pages" required />
-      <label for="read1">read</label>
-      <input type="radio" name="read" id="read1" value="Read" required />
-      <label for="read2">Not Read Yet</label>
-      <input
-        type="radio"
-        name="read"
-        id="read2"
-        value="Not read Yet"
-        required
-      />
-      <button type="submit" id="submit">Send</button>
+      <div>
+        <label for="title">Book Title</label>
+        <input type="text" id="title" name="title" required />
+      </div>
+      <div>
+        <label for="author">Book Author</label>
+        <input type="text" id="author" name="author" required />
+      </div>
+      <div>
+        <label for="pages">Number of pages</label>
+        <input type="number" id="pages" name="pages" required />
+      </div>
+      <div>
+        <label for="read1">Read</label>
+        <input type="radio" name="read" id="read1" value="Read" required />
+        <label for="read2">Not read yet</label>
+        <input
+          type="radio"
+          name="read"
+          id="read2"
+          value="Not read Yet"
+          required
+        />
+      </div>
+      <button type="submit" id="submit">Add Book</button>
+      <button id="close">Close</button>
     </form>
+    <div id="grayout"></div>
     <script src="script.js"></script>
   </body>
 </html>
