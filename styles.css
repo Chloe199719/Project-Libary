@@ -71,8 +71,8 @@ body {
 }
 form {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 100%;
+  left: 100%;
   transform: translate(-50%, -50%) scale(0);
   z-index: 1;
   border: 1px black solid;
@@ -85,12 +85,15 @@ form {
   /* width: 1000px; */
   max-width: 80%;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  transition: 300ms ease-in-out;
 
   /* height: 200px; */
 }
 
 form.active {
   transform: translate(-50%, -50%) scale(1);
+  top: 50%;
+  left: 50%;
 }
 
 form h2 {
