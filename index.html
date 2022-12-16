@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>The Library</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik+80s+Fade&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -25,32 +31,56 @@
       <button id="addBook">Add More books</button>
     </main>
     <form>
-      <div>
-        <label for="title">Book Title</label>
-        <input type="text" id="title" name="title" required />
+      <h2>Add New Book!</h2>
+      <div class="main-form">
+        <div>
+          <label class="main-label" for="title">Book Title</label>
+          <input
+            class="main-input"
+            type="text"
+            id="title"
+            name="title"
+            placeholder=""
+            required
+          />
+        </div>
+        <div>
+          <label class="main-label" for="author">Book Author</label>
+          <input
+            class="main-input"
+            type="text"
+            id="author"
+            name="author"
+            required
+          />
+        </div>
+        <div>
+          <label class="main-label" for="pages">Number of pages</label>
+          <input
+            class="main-input"
+            type="number"
+            id="pages"
+            name="pages"
+            required
+          />
+        </div>
+        <div>
+          <label for="read1">Read</label>
+          <input type="radio" name="read" id="read1" value="Read" required />
+          <label for="read2">Not read yet</label>
+          <input
+            type="radio"
+            name="read"
+            id="read2"
+            value="Not read Yet"
+            required
+          />
+        </div>
       </div>
-      <div>
-        <label for="author">Book Author</label>
-        <input type="text" id="author" name="author" required />
+      <div class="buttons">
+        <button type="submit" id="submit">Add Book</button>
+        <button id="close">Close</button>
       </div>
-      <div>
-        <label for="pages">Number of pages</label>
-        <input type="number" id="pages" name="pages" required />
-      </div>
-      <div>
-        <label for="read1">Read</label>
-        <input type="radio" name="read" id="read1" value="Read" required />
-        <label for="read2">Not read yet</label>
-        <input
-          type="radio"
-          name="read"
-          id="read2"
-          value="Not read Yet"
-          required
-        />
-      </div>
-      <button type="submit" id="submit">Add Book</button>
-      <button id="close">Close</button>
     </form>
     <div id="grayout"></div>
     <script src="script.js"></script>

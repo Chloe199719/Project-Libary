@@ -10,15 +10,22 @@ const addnewbookBtn = document.querySelector(`#addBook`);
 const grayout = document.querySelector(`#grayout`);
 const closeBtn = document.querySelector(`#close`);
 
-let myLibary = [];
+let myLibary = [
+  {
+    title: "Afterlives",
+    author: "Abdulrazak Gurnah",
+    pages: "320",
+    read: false,
+  },
+];
 function book(title, author, pages, read) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.read = read;
-  this.info = function () {
-    return `${title}, ${author}, ${pages}, ${read}`;
-  };
+  // this.info = function () {
+  //   return `${title}, ${author}, ${pages}, ${read}`;
+  // };
 }
 const resetForm = function () {
   titleInput.value = "";
@@ -137,3 +144,4 @@ const closeForm = function () {
 addnewbookBtn.addEventListener(`click`, openForm);
 closeBtn.addEventListener("click", closeForm);
 grayout.addEventListener("click", closeForm);
+drawBooks(myLibary.length);
