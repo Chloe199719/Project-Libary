@@ -33,9 +33,13 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 0 20px;
 }
 
 /* Table Gui */
+tr:first-child {
+  border: 2px solid #1e293b;
+}
 
 table {
   border-collapse: collapse;
@@ -48,10 +52,12 @@ td {
   border: 1px solid rgb(200, 200, 200);
   width: 200px;
   text-align: center;
+  padding: 5px 0;
 }
 
 th {
   background-color: rgba(100, 116, 139, 0.6);
+  padding: 20px 0;
 }
 
 tr:nth-child(odd) td {
