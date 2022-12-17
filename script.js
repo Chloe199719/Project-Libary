@@ -1,3 +1,5 @@
+// Dom Selectors
+
 const titleInput = document.querySelector(`#title`);
 const authorInput = document.querySelector(`#author`);
 const pagesInput = document.querySelector(`#pages`);
@@ -10,6 +12,7 @@ const addnewbookBtn = document.querySelector(`#addBook`);
 const grayout = document.querySelector(`#grayout`);
 const closeBtn = document.querySelector(`#close`);
 
+// Book Storing Array Stores Objects created by the book function
 let myLibary = [
   {
     title: "Afterlives",
@@ -17,7 +20,28 @@ let myLibary = [
     pages: "320",
     read: false,
   },
+  {
+    title: "A Heart That Works",
+    author: "Robe Delaney",
+    pages: "196",
+    read: false,
+  },
+  {
+    title: "All the Lovers in  the Night",
+    author: "Mieko Kawakami",
+    pages: "224",
+    read: false,
+  },
+  {
+    title: "All This Could Be Different",
+    author: "Sarah Thankam Mathews",
+    pages: "320",
+    read: false,
+  },
 ];
+
+//  Object creator for book
+
 function book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -27,6 +51,9 @@ function book(title, author, pages, read) {
   //   return `${title}, ${author}, ${pages}, ${read}`;
   // };
 }
+
+// Reset the form when you exit it and not submit
+
 const resetForm = function () {
   titleInput.value = "";
   authorInput.value = "";
@@ -34,6 +61,8 @@ const resetForm = function () {
   read1.checked = false;
   read2.checked = false;
 };
+
+// Submit Button Checks if every required element been met
 
 const submit = function (e) {
   if (
@@ -62,6 +91,8 @@ const submit = function (e) {
 };
 
 submitBtn.addEventListener(`click`, submit);
+
+//  Draws the Books on Page in a Table
 
 const drawBooks = function (e) {
   remove();
@@ -105,10 +136,12 @@ const drawBooks = function (e) {
   }
 };
 
+// Remove every created dom element for redrawing after an update
 const remove = function () {
   document.querySelectorAll(`.thebooks`).forEach((e) => e.remove());
 };
 
+// Delete button in Actions for a Single book
 const deletethis = function () {
   myLibary.splice(this.dataset.ident, 1);
   remove();
@@ -116,6 +149,7 @@ const deletethis = function () {
   drawBooks(myLibary.length);
 };
 
+//  Toggle to Either Read or not read Yet
 const toggle = function () {
   if (myLibary[this.dataset.ident].read) {
     myLibary[this.dataset.ident].read = false;
@@ -126,11 +160,13 @@ const toggle = function () {
   drawBooks(myLibary.length);
 };
 
+//  Opens the Add new Book form
 const openForm = function () {
   form.classList.add("active");
   grayout.classList.add("active");
 };
 
+//  Closes the form Either by clicking outside of it or Close btn And Submit btn
 const closeForm = function () {
   form.classList.remove("active");
   grayout.classList.remove("active");
@@ -145,3 +181,10 @@ addnewbookBtn.addEventListener(`click`, openForm);
 closeBtn.addEventListener("click", closeForm);
 grayout.addEventListener("click", closeForm);
 drawBooks(myLibary.length);
+
+// Gets Current Year for footer
+const yeartxt = document.querySelector(`#year`);
+const now = new Date();
+const yearNow = now.getFullYear();
+
+yeartxt.textContent = yearNow;
