@@ -5,6 +5,6 @@ Project-Library is Project Made for Odin Projects
 
 #TODO list
 <ul>
-<li>Ui Actions Buttons</li>
-<li>Add more books Button</li>
+<li>Currently none</li>
+<li>Will Added Premanent Storage in future <li>
 </ul>
