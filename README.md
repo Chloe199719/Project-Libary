@@ -6,5 +6,5 @@ Project-Library is Project Made for Odin Projects
 #TODO list
 <ul>
 <li>Currently none</li>
-<li>Will Added Premanent Storage in future <li>
+<li>Will Added Premanent Storage in future </li>
 </ul>
