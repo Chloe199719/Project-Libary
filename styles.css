@@ -122,9 +122,6 @@ form h2 {
   padding-left: 10px;
   font-size: 20px;
 }
-/* input:invalid {
-  border: #7f1d1d 2px solid;
-} */
 input:focus {
   border: 2px #1e40af solid;
 }
